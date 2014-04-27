@@ -1,0 +1,3 @@
+DATABASE="/path/to/iris.db"
+SITE_URL='http://iris.example.com'
+
