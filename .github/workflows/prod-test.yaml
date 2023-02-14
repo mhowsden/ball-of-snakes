@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build
-      - run: |
+        run: |
           echo 'building'
           [[ "${{ secrets.ONE }}" = "hello" ]] && echo "yup" || echo "nope"
 
@@ -18,6 +18,6 @@ jobs:
     environment: production
     steps:
       - name: publish
-      - run: |
+        run: |
           echo "publishing"
           [[ "${{ secrets.ONE }}" = "hello" ]] && echo "yup" || echo "nope"
