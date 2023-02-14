@@ -1,4 +1,6 @@
-on: [workflow-dispatch]
+name: fully manual prod deploy maybe
+on:
+  workflow-dispatch
 
 jobs:
   build:
