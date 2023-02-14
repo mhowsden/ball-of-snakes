@@ -1,0 +1,20 @@
+on: [workflow-dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: |
+          echo 'building'
+          [[ "${{ secrets.ONE }}" = "hello" ]] && echo "yup" || echo "nope"
+
+  publish:
+    needs: [build]
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: publish
+        run: |
+          echo "publishing"
+          [[ "${{ secrets.ONE }}" = "hello" ]] && echo "yup" || echo "nope"
