@@ -1,4 +1,4 @@
-name: fully manual prod deploy maybe
+name: deploy production
 on: workflow_dispatch
 
 jobs:
