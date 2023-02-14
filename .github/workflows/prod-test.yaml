@@ -17,6 +17,6 @@ jobs:
     environment: production
     steps:
       - name: publish
-        |
+      - run: |
         echo 'publishing'
         [[ "${{ secrets.ONE }}" = "hello" ]] && echo "yup" || echo "nope"
