@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build
+      - run: |
         echo 'building'
         [[ "$secrets.one" = "hello" ]] && echo "yup" || echo "nope"
 
