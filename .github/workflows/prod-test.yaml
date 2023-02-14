@@ -9,8 +9,8 @@ jobs:
     steps:
       - name: build
       - run: |
-        echo 'building'
-        [[ "${{ secrets.ONE }}" = "hello" ]] && echo "yup" || echo "nope"
+          echo 'building'
+          [[ "${{ secrets.ONE }}" = "hello" ]] && echo "yup" || echo "nope"
 
   publish:
     needs: [build]
@@ -19,4 +19,5 @@ jobs:
     steps:
       - name: publish
       - run: |
-        [[ "${{ secrets.ONE }}" = "hello" ]] && echo "yup" || echo "nope"
+          echo "publishing"
+          [[ "${{ secrets.ONE }}" = "hello" ]] && echo "yup" || echo "nope"
