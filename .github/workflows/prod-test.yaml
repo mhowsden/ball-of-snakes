@@ -10,7 +10,7 @@ jobs:
       - name: build
       - run: |
         echo 'building'
-        [[ "$secrets.one" = "hello" ]] && echo "yup" || echo "nope"
+        [[ "${{ secrets.ONE }}" = "hello" ]] && echo "yup" || echo "nope"
 
   publish:
     needs: [build]
